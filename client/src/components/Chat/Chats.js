@@ -3,12 +3,12 @@ import Send from "./img/Send.png";
 import emoji from "./img/emoji.png";
 import Attach from "./img/attach.png";
 import io from "socket.io-client";
-
 const socket = io("http://localhost:4000");
 
-function Input() {
+function Chats() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +21,7 @@ function Input() {
     };
     setMessages([...messages, newMessage]);
     setMessage("");
+    
   };
 
   useEffect(() => {
@@ -34,6 +35,8 @@ function Input() {
     };
   }, [messages]);
 
+
+
   return (
     <>
       <div className="bg-gray-200 p-[10px] h-[82%] overflow-y-auto ">
@@ -45,10 +48,9 @@ function Input() {
         <br />
         <div className="">
         {messages.map((message, index) => (
-          <div key={index} className={`my-2 p-2 table text-sm max-w-max max-sm:text-sm pr-4 pl-4 pb-4  ${message.from === "Me" ? "mr-1  bg-cyan-400 ml-auto rounded-l-full rounded-b-full ": "bg-green-400 rounded-r-full rounded-b-full " }`}>
+          <div key={index} className={` max-w-max max-sm:text-sm my-2 p-2 table text-sm max-w-max max-sm:text-sm pr-4 pl-4 pb-2  ${message.from === "Me" ? "mr-1  bg-cyan-400 ml-auto rounded-l-full rounded-b-full ": "bg-green-400 rounded-r-full rounded-b-full " }`}>
             
             <p>
-            <p className=' pl-2.5 mb-2 pr-5  max-w-max max-sm:text-sm' >_Hello</p>
               {message.from}: 
               {message.body}
             </p>
@@ -74,13 +76,13 @@ function Input() {
         />
 
         <div className="flex items-center gap-[10px]">
-          <button className="bottom-none ml-[2px] pr-[8px] border-white mb-2 text-white bg-gray-100 cursor-pointer hover:bg-gray-200 rounded-md h-8  shadow-md shadow-gray-700/50 max-sm:w-[80%]">
+          <button className="bottom-none ml-[2px] pr-[8px] border-white mb-2 text-white bg-gray-100 cursor-pointer hover:bg-gray-200 rounded-md h-8  shadow-md shadow-gray-700/50 max-sm:w-[80%]"  >
             <img src={Attach} alt="" className="h-[24px] cursor-pointer ml-1" />
           </button>
 
           <button
             className="bottom-none  pr-[14px] border-white mb-2 text-white bg-gray-100 cursor-pointer hover:bg-gray-200 rounded-md h-8  shadow-md shadow-gray-700/50  max-sm:w-[100%]"
-            onClick={handleSubmit}
+          onClick={handleSubmit}
           >
             <img className="ml-1  " src={Send} />
           </button>
@@ -90,4 +92,4 @@ function Input() {
   );
 }
 
-export default Input;
+export default Chats;
