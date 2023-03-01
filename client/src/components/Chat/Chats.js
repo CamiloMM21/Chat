@@ -2,17 +2,22 @@ import React, { useState, useEffect } from "react";
 import Send from "./img/Send.png";
 import emoji from "./img/emoji.png";
 import Attach from "./img/attach.png";
+// para cominicarse con el bakend se importa io
 import io from "socket.io-client";
 
+//esto nospermite enviar datos al bakend cliente bakend y el bakend al client
 const socket = io("http://localhost:4000");
 
 function Chats() {
+  //se creo un useState que por defecto va tener un string bacio esto me va permitir el cambio de estado del mensage
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
 
+  //se creo una variable llamada handleSubmit para cuando de sumbit me ejecute algo
   const handleSubmit = (e) => {
+    //para que no refresque la pagina
     e.preventDefault();
-    // send a message to the server
+    // send a message to the server, el emit me sirve para emitir un evento
     socket.emit("message", message);
 
     // los valores de los nuevos mensajes
@@ -20,10 +25,13 @@ function Chats() {
       body: message,
       from: "Me",
     };
+  
     setMessages([...messages, newMessage]);
+    // para establecer el mensage en bacio  y se pueda reflejar en el input
     setMessage("");
   };
 
+  //useEffect nos permite ejecutar codigo cuando cargue la aplicacion
   useEffect(() => {
     const receiveMessage = (message) => {
       setMessages([...messages, message]);
@@ -31,6 +39,7 @@ function Chats() {
     // recceive a message from the server
     socket.on("message", receiveMessage);
 
+    // se vulve a subscribirlo
     return () => {
       socket.off("message", receiveMessage);
     };
@@ -66,11 +75,11 @@ function Chats() {
                 className={` max-w-max max-sm:text-sm my-2 p-2 table text-sm max-w-max max-sm:text-sm pr-4 pl-4 pb-2  ${
                   message.from === "Me"
                     ? "mr-1  bg-gray-500 ml-auto rounded-l-full rounded-b-full font-semibold text-white "
-                    : "bg-green-400 rounded-r-full rounded-b-full font-semibold text-black"
+                    : "bg-green-400 rounded-r-full rounded-b-full font-semibold text-black" 
                 }`}
               >
                 <p>
-                  {message.from}:{message.body}
+                  {/* {message.from}:*/}{message.body} 
                 </p>
               </div>
             ))}
@@ -83,7 +92,9 @@ function Chats() {
 
           <textarea
             type="text"
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)
+           }
+          
             value={message}
             onKeyDown={handleInputKeyDown}
             placeholder="Type something..."
