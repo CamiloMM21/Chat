@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 // import Navbar from './components/Navbar';
 // import Login from './components/Login';
 import Home from './components/Home';
-import Conversation from './page/Conversation';
+import ModificacionPerfil from './page/ModificacionPerfil';
 import Information from './page/Information';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Menu from './components/Menu';
@@ -30,8 +30,8 @@ function App() {
                     exact>
                 </Route>
                 <Route
-                    path='/conv'
-                    element={<Conversation />}>
+                    path='/ProfileM'
+                    element={<ModificacionPerfil />}>
                 </Route>
                 <Route
                     path='/info'
