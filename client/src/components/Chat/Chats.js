@@ -65,8 +65,8 @@ function Chats() {
                 key={index}
                 className={` max-w-max max-sm:text-sm my-2 p-2 table text-sm max-w-max max-sm:text-sm pr-4 pl-4 pb-2  ${
                   message.from === "Me"
-                    ? "mr-1  bg-cyan-400 ml-auto rounded-l-full rounded-b-full "
-                    : "bg-green-400 rounded-r-full rounded-b-full "
+                    ? "mr-1  bg-gray-500 ml-auto rounded-l-full rounded-b-full font-semibold text-white "
+                    : "bg-green-400 rounded-r-full rounded-b-full font-semibold text-black"
                 }`}
               >
                 <p>

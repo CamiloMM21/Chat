@@ -3,16 +3,20 @@ import http from 'http'
 import{ Server as SocketServer} from "socket.io";
 import morgan from 'morgan';
 import cors from "cors"
+
 import {PORT} from './config.js'
 
 const app = express();
-const server = http.createServer(app)
+//se crea un servidor http
+const server = http.createServer(app);
+// luego se crea una nueva instancia del soketsServer
 const io = new SocketServer(server, {
     cors:{
         origin:'http://localhost:3000',
     },
 })
 
+// es para que cualquier servidor externo se pueda conectarse
 app.use(cors())
 app.use(morgan("dev"));
 
