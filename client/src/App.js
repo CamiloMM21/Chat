@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import ReactDOM from 'react-dom/client';
 // import Navbar from './components/Navbar';
 // import Login from './components/Login';
-import Home from './components/Home';
+import Home from './components/log/Home';
 import ModificacionPerfil from './page/ModificacionPerfil';
 import Information from './page/Information';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Menu from './components/Menu';
+import Menu from './page/Menu';
 import { AuthContext } from './context/AuthContext';
 
 

@@ -1,9 +1,9 @@
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { auth } from '../database/firebase';
+import { auth } from '../../database/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { AuthContext } from '../context/AuthContext';
+import { AuthContext } from '../../context/AuthContext';
 
 function Signup() {
     const [email, setEmail] = useState("");

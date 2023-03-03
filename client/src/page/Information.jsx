@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Menu from "../components/Menu";
-import MessengerButton from "../components/Menssages/MessengerButton";
+import Navbar from "../components/nav/Navbar";
+import MessengerButton from "../components/menssages/MessengerButton";
 import BotonAbrirModal from "../components/Chat/BotonAbrirModal";
 
 function Information() {
@@ -18,8 +18,8 @@ function Information() {
 
   return (
     <div style={bodyStyles}>
-      <Menu />
-      <div className=" w-[100%] h-[100vh] bg-slate-800 text-center">
+      <Navbar />
+      <div className=" w-auto pl-[220px] h-[100vh] bg-gray-700 text-center pt-[100px]">
         <div>
           <h1 className="text-4xl font-bold mb-4 text-white">
             Informacion sobre el producto
@@ -30,7 +30,7 @@ function Information() {
             <img
               src="https://exitocol.vtexassets.com/arquivos/ids/13631578/computador-pc-torre-gamer-power-l38-intel-core-i5-10400-ssd-480gb-ram-8gb-led-22-full-hd-nvidia-730-2gb.jpg?v=637935000011270000"
               alt=""
-              className="w-[280px] border-orange-400 border-2 "
+              className="w-[280px] border-orange-400 border-8 "
             />
             </div>
             <div className="text-right  pt-8 md:pl-[60%] max-sm:pl-[10%] ">
@@ -52,7 +52,7 @@ function Information() {
           <p className="text-white pb-6 font-semibold">
             Lorem ipsum dolor sit amet, consectetur <br/> adipisicing elit. Enim quo
             laboriosam, voluptatibus laborum alias culpa! Doloremque{" "}
-          </p><div className="bg-gray-400 w-auto  h-[400px] items-center ml-[60px] mr-[60px]">
+          </p><div className="bg-gray-400 w-auto  h-[40vh] items-center ml-[60px] mr-[20px]">
 
             <h1 className=" pt-44 font-extrabold text-gray-500 text-xl">no hay referencias</h1>
 

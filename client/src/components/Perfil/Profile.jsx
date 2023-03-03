@@ -23,11 +23,11 @@ const Profile = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto bg-slate-800 rounded-md shadow-md overflow-hidden ">
+    <div className="max-w-6xl mx-auto bg-gray-700 rounded-sm shadow-md overflow-hidden w-[100%] h-[100vh] ">
       <div className="md:flex">
-        <div className="md:flex-shrink-0 md:w-48">
+        <div className="md:flex-shrink-0 md:w-48 pt-2 pl-2  ">
           <img
-            className="h-48 w-full object-cover border rounded-br-md  border-gray-600 cursor-pointer hover:scale-110 transform transition-all duration-200 ease-in-out hover:pl-2 hover:pt-2"
+            className="h-48 w-full object-cover border-spacing-y-72 border-8 border-red-100   border-gray-600 cursor-pointer hover:scale-110 transform transition-all duration-200 ease-in-out   "
             src="https://imagenestotales.com/wp-content/uploads/2019/07/7d91a66a879128c7ced17a0cd5e8d48d.jpg"
             alt="Profile image"
           />
@@ -57,34 +57,33 @@ const Profile = () => {
         </h2>
         <p className="text-gray-100 mb-4">@jenifer calderon</p>
         <div className="flex flex-wrap justify-center">
-          <div className="bg-gray-300 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-gray-200 cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+          <div className="bg-yellow-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-yellow-300 cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
             <img
               className="w-[100%] h-24 object-cover rounded-md"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Electrodom%C3%A9sticos_de_l%C3%ADnea_blanca_08.JPG/1200px-Electrodom%C3%A9sticos_de_l%C3%ADnea_blanca_08.JPG"
               alt="Tag image"
             />
-            <p className="text-gray-500 mt-2">Nombre xxx</p>
+            <p className="text-slate-600 mt-2 font-bold">Nombre xxx</p>
           </div>
-          <div className="bg-gray-300 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-gray-200  cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+          <div className="bg-green-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-green-300  cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
             <img
               className="w-[100%] h-24  object-cover rounded-md"
               src="https://cdn.pixabay.com/photo/2011/04/03/13/35/bread-6047_1280.jpg"
               alt="Tag image"
             />
             <p
-              className="text-gray
-500 mt-2"
+              className="text-slate-600 mt-2 font-bold"
             >
               Tag description
             </p>
           </div>
-          <div className="bg-gray-300 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-gray-200  cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+          <div className="bg-blue-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-blue-300  cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
             <img
               className="w-[100%] h-24 object-cover rounded-md"
               src="https://cdn.wpsandwatch.com/bundles/whirlpoolkitchenaidmain/images/com-cat-intro/sda/mixer-small.jpg"
               alt="Tag image"
             />
-            <p className="text-gray-500 mt-2">Tag description</p>
+            <p className="text-slate-600 mt-2 font-bold ">Tag description</p>
           </div>
         </div>
       </div>

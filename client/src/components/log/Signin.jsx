@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
-import { auth } from '../database/firebase';
+import { auth } from '../../database/firebase'
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../context/AuthContext';
+import { AuthContext } from '../../context/AuthContext';
 
 function Signin() {
     const [email, setEmail] = useState("");
@@ -19,7 +19,7 @@ function Signin() {
                 const user = userCredential.user;
                 console.log(user);
                 dispatch({type:"LOGIN", payload:user});
-                navigate("/info");
+                navigate("/menu");
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -34,7 +34,7 @@ function Signin() {
         .then((userCredential) => {
             const user = userCredential.user;
             dispatch({type:"LOGIN", payload:user});
-            navigate("/info");
+            navigate("/menu");
         })
         .catch((error) => {
             const errorCode = error.code;
