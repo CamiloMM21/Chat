@@ -13,11 +13,11 @@ const MiComponente = ({ onClose }) => {
         transition={{ duration: 0.3 }}
       >
         {" "}
-       <div className="flex">
+       <div className="relative ">
         <img src={Close} onClick={onClose}
-          className="  hover:bg-gray-100  hover:opacity-20 hover:rounded-xl w-8 mt-4  ml-[83%] cursor-pointer bg-slate-50 opacity-10 rounded-xl  "/>
+          className="  bg-blue-600  hover:bg-blue-300   hover:opacity-20 hover:rounded-xl w-7 mt-4 absolute static ml-[81%] cursor-pointer bg-blue-50 opacity-40 rounded-md  "/>
        </div>
-        <div className="w-[1100px] py-2 px-4 max-md:w-auto">
+        <div className="w-[1100px] py-2 px-4 max-sm:w-auto pl-5  ">
           <Chats />
         </div>
       </motion.div>

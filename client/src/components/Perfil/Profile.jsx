@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 const Profile = () => {
-  const [name, setName] = useState("John Doe");
-  const [email, setEmail] = useState("johndoe@example.com");
+
+  const userInfo  = useContext(AuthContext)
+  console.log(AuthContext)
   const [age, setAge] = useState("30");
   const [description, setDescription] = useState("Lorem ipsum dolor sit amet");
-
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
 
   const handleAgeChange = (event) => {
     setAge(event.target.value);
@@ -28,14 +22,14 @@ const Profile = () => {
         <div className="md:flex-shrink-0 md:w-48 pt-2 pl-2  ">
           <img
             className="h-48 w-full object-cover border-spacing-y-72 border-8 border-red-100   border-gray-600 cursor-pointer hover:scale-110 transform transition-all duration-200 ease-in-out   "
-            src="https://imagenestotales.com/wp-content/uploads/2019/07/7d91a66a879128c7ced17a0cd5e8d48d.jpg"
+            src={userInfo.currentUser.photoURL}
             alt="Profile image"
           />
         </div>
         <div className="p-4 ">
-          <h1 className="text-3xl font-bold mb-2 text-white">{name}</h1>
+          <h1 className="text-3xl font-bold mb-2 text-white">{userInfo.currentUser.displayName}</h1>
           <div className="uppercase tracking-wide text-sm text-blue-500 font-semibold">
-            {email}
+            {userInfo.currentUser.email}
           </div>
           <div className="ml-[680px] max-sm:ml-auto max-md:ml-auto text-gray-200  ">
             <h2 className="text-xl font-bold mb-4 ">Description</h2>
@@ -43,6 +37,7 @@ const Profile = () => {
               className="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring bg-orange-200 focus:ring-indigo-500 focus:ring-opacity-50 text-black"
               value={description}
               onChange={handleDescriptionChange}
+              
             />
             <div className="mt-4">
               <h2 className="text-xl font-bold mb-2">Edad:</h2>

@@ -1,14 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Send from "./img/Send.png";
 import emoji from "./img/emoji.png";
 import Attach from "./img/attach.png";
 // para cominicarse con el bakend se importa io
 import io from "socket.io-client";
+import { AuthContext } from "../../context/AuthContext";
 
 //esto nospermite enviar datos al bakend cliente bakend y el bakend al client
 const socket = io("http://localhost:4000");
 
 function Chats() {
+
+  const userInfo  = useContext(AuthContext)
+  console.log(userInfo)
+
+
   //se creo un useState que por defecto va tener un string bacio esto me va permitir el cambio de estado del mensage
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
@@ -55,18 +61,18 @@ function Chats() {
 
   return (
     <>
-      <div className="w-[100%] max-w-[750px] bg-blue-600 m-auto border-2 border-gray-700 rounded-xl ">
+      <div id="container" className="w-[100%] max-w-[750px] bg-blue-600 m-auto border-2 border-purple-50 rounded-xl ">
         <div className="">
           <div className="grid  pt-3 w-24  text-left mr-[100%] grid-cols-2">
-            <img src="https://i.pinimg.com/236x/41/6e/65/416e6551b055039154711f332db48d98.jpg" 
+            <img src={userInfo.currentUser.photoURL} 
             className="rounded-sm  pl-2 pb-2 cursor-pointer"/>
             <span className="font-semibold text-lg text-gray-200 mr-[80%] pl-2 pt-2 cursor-pointe ">
-              Matias
+              {userInfo.currentUser.displayName}
             </span>
           </div>
         </div>
 
-        <div className="relative w-[100%] bg-orange-100 min-h-[550px] max-h-[500px] overflow-y-auto pt-[10px] pr-[30px] pl-[30px] pb-[20px] shadow-gray-500 ">
+        <div className="relative w-[100%] bg-cyan-100 min-h-[550px] max-h-[500px] overflow-y-auto pt-[10px] pr-[30px] pl-[30px] pb-[20px] shadow-gray-500 ">
           <br />
           <div className="">
             {messages.map((message, index) => (
@@ -86,7 +92,7 @@ function Chats() {
           </div>
         </div>
         <div className="flex justify-between max-h-[81px] w-[100%] pl-1 pr-1 mt-2">
-          <button className="bottom-none  pr-[8px] border-white mb-2 text-white bg-blue-600 cursor-pointer hover:bg-blue-700 rounded-md h-8  shadow-md shadow-gray-700/50 max-sm:w-[80%] ">
+          <button className="bottom-none  pr-[8px] border-white mb-2 text-white bg-blue-700 cursor-pointer hover:bg-blue-800 rounded-md h-8  shadow-md shadow-gray-700/50 max-sm:w-[80%] ">
             <img src={Attach} alt="" className="h-[24px] cursor-pointer ml-1" />
           </button>
 

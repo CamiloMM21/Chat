@@ -1,7 +1,7 @@
 import React from "react";
 import Profile from "../components/perfil/Profile";
 import Navbar from "../components/nav/Navbar";
-import MessengerButton from "../components/menssages/MessengerButton";
+import NotificationCounter from "../components/menssages/NotificationCounter";
 
 function ModificacionPerfil() {
   
@@ -11,7 +11,7 @@ function ModificacionPerfil() {
       <div className="mt-[81px] max-sm:pl-2 pl-[256px] ">
         <Profile />
         <div>
-          <MessengerButton/>
+          <NotificationCounter/>
         </div>
       </div>
     </div>

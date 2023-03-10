@@ -19,7 +19,7 @@ function Signin() {
                 const user = userCredential.user;
                 console.log(user);
                 dispatch({type:"LOGIN", payload:user});
-                navigate("/menu");
+                navigate("/info");
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -34,7 +34,7 @@ function Signin() {
         .then((userCredential) => {
             const user = userCredential.user;
             dispatch({type:"LOGIN", payload:user});
-            navigate("/menu");
+            navigate("/info");
         })
         .catch((error) => {
             const errorCode = error.code;

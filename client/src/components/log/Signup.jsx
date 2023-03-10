@@ -19,7 +19,7 @@ function Signup() {
             .then((userCredential) => {
                 const user = userCredential.user;
                 dispatch({type:"LOGIN", payload:user});
-                navigate("/menu");
+                navigate("/info");
             })
             .catch((error) => {
                 const errorCode = error.code;
