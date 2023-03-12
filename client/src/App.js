@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Menu from './page/Menu';
 import { AuthContext } from './context/AuthContext';
 
+import FileIcon from './components/Chat/FileIcon';
+
 
 function App() {
     // Creacion de funcion "RequireAuth" para controlar accesos a rutas por medio de "currentUser"
@@ -36,6 +38,10 @@ function App() {
                 <Route
                     path='/info'
                     element={<Information />}>
+                </Route>
+                <Route
+                    path='/pru'
+                    element={<FileIcon />}>
                 </Route>
             </Routes>
         </Router>

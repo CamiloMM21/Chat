@@ -5,7 +5,6 @@ import Attach from "./img/attach.png";
 // para cominicarse con el bakend se importa io
 import io from "socket.io-client";
 import { AuthContext } from "../../context/AuthContext";
-
 //esto nospermite enviar datos al bakend cliente bakend y el bakend al client
 const socket = io("http://localhost:4000");
 
@@ -18,6 +17,9 @@ function Chats() {
   //se creo un useState que por defecto va tener un string bacio esto me va permitir el cambio de estado del mensage
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+
+
+  const [fileContent, setFileContent] = useState("");
 
   //se creo una variable llamada handleSubmit para cuando de sumbit me ejecute algo
   const handleSubmit = (e) => {
@@ -57,7 +59,18 @@ function Chats() {
       console.log("Se presionó Enter");
       handleSubmit();
     }
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      setFileContent(e.target.result);
+    };
+    reader.readAsText(file);
+    
   };
+
+//
+
+ 
 
   return (
     <>
@@ -91,8 +104,8 @@ function Chats() {
             ))}
           </div>
         </div>
-        <div className="flex justify-between max-h-[81px] w-[100%] pl-1 pr-1 mt-2">
-          <button className="bottom-none  pr-[8px] border-white mb-2 text-white bg-blue-700 cursor-pointer hover:bg-blue-800 rounded-md h-8  shadow-md shadow-gray-700/50 max-sm:w-[80%] ">
+        <div  className="flex justify-between max-h-[81px] w-[100%] pl-1 pr-1 mt-2">
+          <button type="file" className="bottom-none  pr-[8px] border-white mb-2 text-white bg-blue-700 cursor-pointer hover:bg-blue-800 rounded-md h-8  shadow-md shadow-gray-700/50 max-sm:w-[80%] ">
             <img src={Attach} alt="" className="h-[24px] cursor-pointer ml-1" />
           </button>
 
@@ -111,7 +124,7 @@ function Chats() {
           />
 
           <button className="bottom-none  pr-[12px] border-white mb-2 text-white bg-yellow-400 cursor-pointer hover:bg-yellow-500 rounded-md h-8  shadow-md shadow-gray-700/50 mr-1">
-            <img className="flex h-4 w-4 ml-2 " src={emoji} />
+          <img className="flex h-4 w-4 ml-2 " src={emoji} />
           </button>
 
           <button
