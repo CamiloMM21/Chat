@@ -19,7 +19,6 @@ function Chats() {
   const [messages, setMessages] = useState([]);
 
 
-  const [fileContent, setFileContent] = useState("");
 
   //se creo una variable llamada handleSubmit para cuando de sumbit me ejecute algo
   const handleSubmit = (e) => {
@@ -59,13 +58,7 @@ function Chats() {
       console.log("Se presionó Enter");
       handleSubmit();
     }
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      setFileContent(e.target.result);
-    };
-    reader.readAsText(file);
-    
+ 
   };
 
 //
