@@ -21,10 +21,6 @@ video{
     object-fit: cover;
 
 }
-
-
-  
- 
   
   .bun {
     bottom: 10px;
@@ -107,3 +103,21 @@ video{
       opacity: 0;
     }
   }
+
+  .container {
+    margin-top: 40px;
+  }
+  
+  .max-w-md {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .img {
+    transition: transform 0.2s;
+  }
+  
+  .img:hover {
+    transform: scale(1.05);
+  }
+  

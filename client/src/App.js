@@ -10,6 +10,8 @@ import Menu from './page/Menu';
 import { AuthContext } from './context/AuthContext';
 
 import FileIcon from './components/Chat/FileIcon';
+import Buzon from './page/Buzon';
+import ConfigPerfil from './page/ConfigPerfil';
 
 
 function App() {
@@ -34,6 +36,14 @@ function App() {
                 <Route
                     path='/ProfileM'
                     element={<ModificacionPerfil />}>
+                </Route>
+                <Route
+                    path='/buzon'
+                    element={<Buzon/>}>
+                </Route>
+                <Route
+                    path='/conf'
+                    element={<ConfigPerfil/>}>
                 </Route>
                 <Route
                     path='/info'

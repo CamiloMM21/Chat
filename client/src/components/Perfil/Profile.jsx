@@ -31,10 +31,10 @@ const Profile = () => {
           <div className="uppercase tracking-wide text-sm text-blue-500 font-semibold">
             {userInfo.currentUser.email}
           </div>
-          <div className="ml-[680px] max-sm:ml-auto max-md:ml-auto text-gray-200  ">
+          <div className="ml-[400px] max-sm:ml-auto max-md:ml-auto text-gray-200   ">
             <h2 className="text-xl font-bold mb-4 ">Description</h2>
             <textarea
-              className="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring bg-orange-200 focus:ring-indigo-500 focus:ring-opacity-50 text-black"
+              className="block mt-1 max-sm:w-full w-[510px] md:w-[340px]  rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring bg-purple-300 focus:ring-indigo-500 focus:ring-opacity-50 text-black cursor-none "
               value={description}
               onChange={handleDescriptionChange}
               
@@ -80,6 +80,79 @@ const Profile = () => {
             />
             <p className="text-slate-600 mt-2 font-bold ">Tag description</p>
           </div>
+          <div className="bg-blue-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-blue-300  cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+            <img
+              className="w-[100%] h-24 object-cover rounded-md"
+              src="https://cdn.wpsandwatch.com/bundles/whirlpoolkitchenaidmain/images/com-cat-intro/sda/mixer-small.jpg"
+              alt="Tag image"
+            />
+            <p className="text-slate-600 mt-2 font-bold ">Tag description</p>
+          </div>
+          <div className="bg-blue-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-blue-300  cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+            <img
+              className="w-[100%] h-24 object-cover rounded-md"
+              src="https://cdn.wpsandwatch.com/bundles/whirlpoolkitchenaidmain/images/com-cat-intro/sda/mixer-small.jpg"
+              alt="Tag image"
+            />
+            <p className="text-slate-600 mt-2 font-bold ">Tag description</p>
+          </div>
+          <div className="bg-yellow-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-yellow-300 cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+            <img
+              className="w-[100%] h-24 object-cover rounded-md"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Electrodom%C3%A9sticos_de_l%C3%ADnea_blanca_08.JPG/1200px-Electrodom%C3%A9sticos_de_l%C3%ADnea_blanca_08.JPG"
+              alt="Tag image"
+            />
+            <p className="text-slate-600 mt-2 font-bold">Nombre xxx</p>
+          </div>
+          <div className="bg-yellow-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-yellow-300 cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+            <img
+              className="w-[100%] h-24 object-cover rounded-md"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Electrodom%C3%A9sticos_de_l%C3%ADnea_blanca_08.JPG/1200px-Electrodom%C3%A9sticos_de_l%C3%ADnea_blanca_08.JPG"
+              alt="Tag image"
+            />
+            <p className="text-slate-600 mt-2 font-bold">Nombre xxx</p>
+          </div>
+          <div className="bg-yellow-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-yellow-300 cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+            <img
+              className="w-[100%] h-24 object-cover rounded-md"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Electrodom%C3%A9sticos_de_l%C3%ADnea_blanca_08.JPG/1200px-Electrodom%C3%A9sticos_de_l%C3%ADnea_blanca_08.JPG"
+              alt="Tag image"
+            />
+            <p className="text-slate-600 mt-2 font-bold">Nombre xxx</p>
+          </div>
+          <div className="bg-yellow-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-yellow-300 cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+            <img
+              className="w-[100%] h-24 object-cover rounded-md"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Electrodom%C3%A9sticos_de_l%C3%ADnea_blanca_08.JPG/1200px-Electrodom%C3%A9sticos_de_l%C3%ADnea_blanca_08.JPG"
+              alt="Tag image"
+            />
+            <p className="text-slate-600 mt-2 font-bold">Nombre xxx</p>
+          </div>
+          <div className="bg-green-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-green-300  cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+            <img
+              className="w-[100%] h-24  object-cover rounded-md"
+              src="https://cdn.pixabay.com/photo/2011/04/03/13/35/bread-6047_1280.jpg"
+              alt="Tag image"
+            />
+            <p
+              className="text-slate-600 mt-2 font-bold"
+            >
+              Tag description
+            </p>
+          </div>
+          <div className="bg-green-200 w-[200px] p-2 rounded-md mx-2 my-2 hover:bg-green-300  cursor-pointer hover:scale-110 transform transition-all duration-300 ease-in-out">
+            <img
+              className="w-[100%] h-24  object-cover rounded-md"
+              src="https://cdn.pixabay.com/photo/2011/04/03/13/35/bread-6047_1280.jpg"
+              alt="Tag image"
+            />
+            <p
+              className="text-slate-600 mt-2 font-bold"
+            >
+              Tag description
+            </p>
+          </div>
+
         </div>
       </div>
     </div>

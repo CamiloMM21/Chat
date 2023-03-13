@@ -7,7 +7,7 @@ function NotificationCounter() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    const socket = io('http://localhost:3001'); // URL del servidor de sockets
+    const socket = io('http://localhost:4000'); // URL del servidor de sockets
 
     socket.off('mensages', (message) => {
       setMessages([...messages, message]);
