@@ -1,5 +1,5 @@
 import React from "react";
-import Configuracion from "../components/config/Configuracion";
+import Configuracion from "../components/configuracion/Configuracion";
 import NotificationCounter from "../components/menssages/NotificationCounter";
 import Navbar from "../components/nav/Navbar";
 

@@ -5,8 +5,8 @@ import EliminarCuentaModal from "./EliminarCuentaModal";
 function Configuracion() {
   const [activeButton, setActiveButton] = useState("modificarPerfil");
 
-  const handleClick = (button) => {
-    setActiveButton(button);
+  const handleClick = (e) => {
+    setActiveButton(e);
   };
 
   return (
