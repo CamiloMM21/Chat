@@ -10,7 +10,7 @@ function Chats() {
   const userContext = useContext(AuthContext);
   const firstName = userContext.currentUser?.displayName?.split(" ")[0];
   const photoURL = userContext.currentUser?.photoURL;
-
+console.log(userContext)
   //se creo un useState que por defecto va tener un string bacio esto me va permitir el cambio de estado del mensage
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
