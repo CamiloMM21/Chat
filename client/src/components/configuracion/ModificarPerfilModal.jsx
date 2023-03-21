@@ -7,7 +7,7 @@ function ModificarPerfilModal() {
       <div className="flex items-center mb-4">
         <div className="mr-24">
           <button
-              className="bg-cyan-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
             >
               Cambiar 
@@ -29,7 +29,7 @@ function ModificarPerfilModal() {
               Nombre completo
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="bg-gray-600 border border-gray-500 text-white placeholder-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               id="nombre-completo"
               type="text"
               placeholder="Nombre completo"
@@ -43,7 +43,7 @@ function ModificarPerfilModal() {
               Nombre de usuario
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="bg-gray-600 border border-gray-500 text-white placeholder-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               id="nombre-usuario"
               type="text"
               placeholder="Nombre de usuario"
@@ -57,7 +57,7 @@ function ModificarPerfilModal() {
               Teléfono
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="bg-gray-600 border border-gray-500 text-white placeholder-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               id="telefono"
               type="tel"
               placeholder="Teléfono"
@@ -71,7 +71,7 @@ function ModificarPerfilModal() {
               Correo electrónico
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="bg-gray-600 border border-gray-500 text-white placeholder-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               id="correo"
               type="email"
               placeholder="Correo electrónico"
@@ -85,7 +85,7 @@ function ModificarPerfilModal() {
               Ciudad
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="bg-gray-600 border border-gray-500 text-white placeholder-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               id="ciudad"
               type="text"
               placeholder="Ciudad"
@@ -95,13 +95,13 @@ function ModificarPerfilModal() {
       </div>
       <div className="flex items-center justify-between">
         <button
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="button"
         >
           Guardar cambios
         </button>
         <button
-          className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="button"
         >
           Cancelar

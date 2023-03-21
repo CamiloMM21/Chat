@@ -34,7 +34,7 @@ function NotificationCounter() {
 
       {showMessenger && (
         <div className="fixed bottom-20 right-10 w-64 h-96 bg-white border border-gray-200 shadow-lg">
-          <div className="p-4 border-b border-gray-200 font-medium text-lg bg-blue-600 text-white">
+          <div className="p-4 border-b border-gray-200 font-medium text-lg bg-gradient-to-r from-green-400 to-blue-500 text-white">
             Messages
           </div>
           <div className="p-4 text-gray-500">
